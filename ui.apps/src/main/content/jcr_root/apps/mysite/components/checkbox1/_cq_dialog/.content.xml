@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Checkbox"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[checkbox]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <columns
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <checkbox1
+                        granite:class="cq-dialog-checkbox-showhide1"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}true"
+                        name="./employee"
+                        text="Employee Details">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-checkbox-showhide-target=".togglefield1"/>
+                    </checkbox1>
+                    <toggle1
+                        granite:class="togglefield1"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <employeeName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Employee Name"
+                                name="./ename">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidecheckboxvalue="ename"/>
+                            </employeeName>
+                            <employeeDeg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Employee Designation"
+                                name="./edeg">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidecheckboxvalue="edeg"/>
+                            </employeeDeg>
+                        </items>
+                    </toggle1>
+                    <checkbox2
+                        granite:class="cq-dialog-checkbox-showhide2"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        checked="{Boolean}true"
+                        name="./student"
+                        text="Student Details">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-checkbox-showhide-target=".togglefield2"/>
+                    </checkbox2>
+                    <toggle2
+                        granite:class="togglefield2"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <studentName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Student Name"
+                                name="./sname">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidecheckboxvalue="sname"/>
+                            </studentName>
+                            <studentRoll
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Student Rollno"
+                                name="./roll">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidecheckboxvalue="roll"/>
+                            </studentRoll>
+                        </items>
+                    </toggle2>
+                </items>
+            </columns>
+        </items>
+    </content>
+</jcr:root>

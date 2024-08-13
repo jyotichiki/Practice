@@ -1,0 +1,7 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.model="com.mysite.core.models.SearchImageModel"/>
+
+<sly data-sly-test.image="${model.image}">
+    <img width=500px; height=500px; src="${image}" alt="Unsplash Image">
+</sly>
+

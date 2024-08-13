@@ -1,0 +1,25 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+
+<sly data-sly-use.models="com.mysite.core.models.CheckboxModel"/>
+<html lang="en">
+<head>
+</head>
+<body>
+    <sly data-sly-test="${models.employee}">
+        <h3>Employee Details</h3>
+        <div class="employee-info">
+            <p>Employee Name: ${models.ename}</p>
+            <p>Designation: ${models.edeg}</p>
+        </div>
+    </sly>
+    <sly data-sly-test="${models.student}">
+    	<h3>Student Details</h3>
+        <div class="student-info">
+            <p>Student Name: ${models.sname}</p>
+            <p>Student RollNo: ${models.roll}</p>
+        </div>
+    </sly>
+</body>
+</html>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !models.employee && !models.student}"></sly>

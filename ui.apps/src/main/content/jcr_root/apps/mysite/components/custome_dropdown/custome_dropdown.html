@@ -1,0 +1,9 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+    <sly data-sly-use.models="com.mysite.core.models.DropdownModel"/>
+
+    <sly data-sly-test="${models.qualification!='none'}">${models.qualification}<br></sly>
+    <sly data-sly-test="${models.qualification=='tenthmarks'}">${models.tenth}<br>${models.syllabus}</sly><br>
+    <sly data-sly-test="${models.qualification=='intermarks'}">${models.inter}<br>${models.syllabus1}</sly><br>
+    <sly data-sly-test="${models.qualification=='degreemarks'}">${models.degree}<br>${models.syllabus2}</sly><br>
+</sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty = models.qualification == 'none' && !models.tenth && !models.inter && !models.degree}"></sly>

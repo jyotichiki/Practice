@@ -1,0 +1,17 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+
+<html lang="en">
+<head>
+</head>
+<body>
+	<sly data-sly-test="${properties.myVideo}">
+    <center>
+    <video width="640" height="360" controls>
+     <source src="${properties.myVideo}">
+    </video>
+    </center>
+	</sly>
+</body>
+</html>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !properties.myVideo}"></sly>

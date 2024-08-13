@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dropdown"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <qualification
+                granite:class="cq-dialog-dropdown-showhide"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                emptyText="select "
+                fieldLabel="Select Qualification"
+                name="./qualification">
+                <granite:data
+                    jcr:primaryType="nt:unstructured"
+                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <none
+                        jcr:primaryType="nt:unstructured"
+                        selected="{Boolean}true"
+                        text="None"
+                        value="none"/>
+                    <tenthmarks
+                        jcr:primaryType="nt:unstructured"
+                        text="Tenthmarks"
+                        value="tenthmarks"/>
+                    <intermarks
+                        jcr:primaryType="nt:unstructured"
+                        text="Intermarks"
+                        value="intermarks"/>
+                    <degreemarks
+                        jcr:primaryType="nt:unstructured"
+                        text="Degreemarks"
+                        value="degreemarks"/>
+                </items>
+            </qualification>
+            <tenthMarks
+                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <granite:data
+                    jcr:primaryType="nt:unstructured"
+                    showhidetargetvalue="tenthmarks"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <tenth
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tenth"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Enter Tenth Marks"
+                        fieldDescription="Enter Tenth Marks"
+                        fieldLabel="Tenth Marks"
+                        name="./tenth"
+                        required="{Boolean}true"/>
+                    <syllabus
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Syllabus"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Syllabus"
+                        fieldDescription="enter the syllabus"
+                        fieldLabel="Syllabus"
+                        name="./syllabus"
+                        required="{Boolean}true"/>
+                </items>
+            </tenthMarks>
+            <interMarks
+                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <granite:data
+                    jcr:primaryType="nt:unstructured"
+                    showhidetargetvalue="intermarks"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <inter
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Enter Inter Marks"
+                        fieldDescription="Enter Inter Marks"
+                        fieldLabel="Inter Marks"
+                        name="./inter"
+                        required="{Boolean}true"/>
+                    <syllabus
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Syllabus"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Syllabus"
+                        fieldDescription="enter the syllabus"
+                        fieldLabel="Syllabus"
+                        name="./syllabus1"
+                        required="{Boolean}true"/>
+                </items>
+            </interMarks>
+            <degreeMarks
+                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <granite:data
+                    jcr:primaryType="nt:unstructured"
+                    showhidetargetvalue="degreemarks"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <degree
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Enter Degree Marks"
+                        fieldDescription="Enter Degree Marks"
+                        fieldLabel="DegreeMarks"
+                        name="./degree"
+                        required="{Boolean}true"/>
+                    <syllabus
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Syllabus"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Syllabus"
+                        fieldDescription="enter the syllabus"
+                        fieldLabel="Syllabus"
+                        name="./syllabus2"
+                        required="{Boolean}true"/>
+                </items>
+            </degreeMarks>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+<sly data-sly-use.models="com.mysite.core.models.PageInfoModel"/>
+<sly data-sly-test="${models.currentPage || models.resource}">
+    <div class="Page_info">
+        <sly data-sly-test="${models.currentPage}">
+            <p>currentPage: ${models.currentPage}</p>
+        </sly>
+        <sly data-sly-test="${models.resource}">
+            <p>resource: ${models.resource}</p>
+        </sly>
+        <sly data-sly-test="${models.currentPageProperties}">
+            <div class="Page_info">
+                <h2>Page Properties:</h2>
+                <ul>
+                    <sly data-sly-list="${models.currentPageProperties.entrySet}">
+                        <li>${item.key}: ${item.value}</li>
+                    </sly>
+                </ul>
+            </div>
+           </sly>
+    </div>
+</sly>
+
+
