@@ -1,4 +1,5 @@
 package com.mysite.core.models;
+
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -25,6 +26,4 @@ public class Practice_JSON_Exp
     public String getLname() {
         return lname +" "+ "shakti"+" "+"prabhat";
     }
-
-
 }
