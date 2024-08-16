@@ -26,6 +26,4 @@ public class Practice_JSON_Exp
     public String getLname() {
         return lname +" "+ "shakti"+" "+"prabhat";
     }
-
 }
-
