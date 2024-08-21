@@ -83,6 +83,4 @@ public class WeatherService1 {
             return null;
         }
     }
-
-
 }
