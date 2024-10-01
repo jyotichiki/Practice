@@ -1,0 +1,24 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
+
+<sly data-sly-use.billObj="com.mysite.core.models.BillCardModel">
+    <div class="bill-container">
+        <sly data-sly-list.item="${billObj.bill}">
+            <div class="bill-item">
+                <div class="dish-info">
+                    <sly data-sly-test="${item.dishName}">
+                        <div class="dish-name">Dish Name: ${item.dishName @ context='html'}</div>
+                    </sly>
+                    <sly data-sly-test="${item.dishPrice}">
+                        <div class="dish-price">Dish Price: ${item.dishPrice @ context='html'}</div>
+                    </sly>
+                </div>
+            </div>
+        </sly>
+    </div>
+
+    <div class="total-price-container">
+        <strong>Total Price: ${billObj.totalPrice @ context='html'}</strong>
+    </div>
+</sly>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !billObj.size}"></sly>
