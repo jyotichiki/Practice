@@ -1,0 +1,100 @@
+/* Container - CSS Grid Implementation */
+.bill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive CSS Grid */
+    gap: 20px; /* Grid gap highlighting spacing between grid items */
+    padding: 40px;
+    background: linear-gradient(145deg, #e3e4e6, #f0f1f3); /* Soft background for focus */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 40px;
+    border: 1px solid #ccc; /* Box Model: Border */
+}
+
+/* Flexbox Implementation for each bill item */
+.bill-item {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Box Model: Padding */
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Box Model: Shadow */
+    border: 2px solid transparent;
+}
+
+.bill-item:hover {
+    transform: scale(1.05); /* Hover effect */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Hover shadow */
+    background-color: #f0f8ff; /* Light color on hover */
+    border-color: #4db8ff; /* Border changes on hover */
+}
+
+/* Styling for dish name */
+.dish-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px; /* Box Model: Padding */
+    margin-bottom: 8px; /* Box Model: Margin */
+    text-align: center;
+    background-color: #ffde59; /* Vibrant yellow */
+    border-radius: 8px;
+}
+
+/* Styling for dish price */
+.dish-price {
+    font-size: 18px;
+    color: #ff7043; /* Orange color */
+    padding: 10px; /* Box Model: Padding */
+    background-color: #fbe9e7; /* Light coral background */
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Total price section */
+.total-price-container {
+    padding: 20px; /* Box Model: Padding */
+    background-color: #673ab7; /* Deep purple */
+    color: #ffffff;
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Box Model: Shadow */
+    border: 1px solid #ccc; /* Box Model: Border */
+    margin-top: 20px; /* Box Model: Margin */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.total-price-container:hover {
+    background-color: #5e35b1;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Elevated hover shadow */
+}
+
+/* Hover effects for dish name and price */
+.bill-item:hover .dish-name {
+    background-color: #ffcc00; /* Hover color change */
+}
+
+.bill-item:hover .dish-price {
+    color: #ff5722;
+    background-color: #ffccbc;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .bill-item {
+        padding: 16px;
+    }
+
+    .dish-name, .dish-price {
+        font-size: 16px;
+    }
+
+    .total-price-container {
+        font-size: 20px;
+    }
+}
